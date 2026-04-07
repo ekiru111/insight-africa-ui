@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const FooterSection = () => {
   return (
@@ -6,13 +7,8 @@ const FooterSection = () => {
       <div className="container mx-auto section-padding">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-8 h-8 rounded-md gradient-gold flex items-center justify-center">
-                <span className="font-heading font-bold text-accent-foreground text-sm">IA</span>
-              </div>
-              <span className="font-heading font-semibold text-lg text-primary-foreground tracking-tight">
-                Insight Analytics Africa
-              </span>
+            <div className="mb-5">
+              <img src={logo} alt="Insight Analytics Africa" className="h-12 w-auto brightness-0 invert opacity-90" />
             </div>
             <p className="text-primary-foreground/60 font-body leading-relaxed max-w-sm mb-6">
               Empowering data-driven decision-making across Africa through rigorous
