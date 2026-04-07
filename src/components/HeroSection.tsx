@@ -1,5 +1,6 @@
 import { ArrowRight, BarChart3, TrendingUp } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import GeometricAfrica from "./GeometricAfrica";
 
 const HeroSection = () => {
   return (
@@ -36,6 +37,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Geometric Africa data-point watermark */}
+      <GeometricAfrica className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-primary-foreground opacity-[0.06] pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto section-padding pt-32 pb-20">
