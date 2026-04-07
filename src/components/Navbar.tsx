@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -28,12 +29,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between section-padding">
         <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-md gradient-gold flex items-center justify-center">
-            <span className="font-heading font-bold text-accent-foreground text-sm">IA</span>
-          </div>
-          <span className={`font-heading font-semibold text-lg tracking-tight transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            Insight Analytics
-          </span>
+          <img src={logo} alt="Insight Analytics Africa" className="h-10 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
