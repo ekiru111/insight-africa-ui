@@ -76,8 +76,8 @@ const CaseStudySection = () => {
 
         {/* Uganda Malaria ML Case Study */}
         <div className="glass-card rounded-2xl p-8 lg:p-12 mb-8">
-          <div className="grid lg:grid-cols-3 gap-8 items-start">
-            <div className="lg:col-span-2">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
+            <div>
               <span className="inline-block bg-accent/10 text-accent text-xs font-semibold font-body tracking-wider uppercase px-3 py-1.5 rounded-full mb-4">
                 Disease Modelling & Surveillance
               </span>
@@ -95,6 +95,19 @@ const CaseStudySection = () => {
                 <li>SEIR model: peak of 2,978 sick children at day 40, R₀ ≈ 10.09.</li>
                 <li>Mass LLIN distribution scenario: 16% reduction in peak cases, peak delayed by 10 days.</li>
               </ul>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                {[
+                  { value: "7,787", label: "Children Tested" },
+                  { value: "13", label: "Regions Mapped" },
+                  { value: "16%", label: "Peak Case Reduction" },
+                  { value: "R₀ 10", label: "Transmission Index" },
+                ].map((m) => (
+                  <div key={m.label} className="text-center bg-secondary rounded-xl p-4">
+                    <p className="font-heading text-xl font-bold text-accent">{m.value}</p>
+                    <p className="text-muted-foreground text-xs font-body mt-1">{m.label}</p>
+                  </div>
+                ))}
+              </div>
               <a
                 href="https://github.com/ekiru111/Uganda-Malaria-Spatio-temporal-ML"
                 target="_blank"
@@ -105,30 +118,25 @@ const CaseStudySection = () => {
                 <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                { value: "7,787", label: "Children Tested" },
-                { value: "13", label: "Regions Mapped" },
-                { value: "16%", label: "Peak Case Reduction" },
-                { value: "R₀ 10", label: "Transmission Index" },
-              ].map((m) => (
-                <div key={m.label} className="text-center bg-secondary rounded-xl p-4">
-                  <p className="font-heading text-xl font-bold text-accent">{m.value}</p>
-                  <p className="text-muted-foreground text-xs font-body mt-1">{m.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="mt-8 rounded-xl overflow-hidden bg-background border border-border">
-            <img
-              src={malariaRiskMap}
-              alt="Choropleth map showing malaria risk hotspots by region in Uganda 2018-19, with Karamoja at 32.1% and Busoga at 21.4%"
-              className="w-full h-auto object-contain"
-              loading="lazy"
-            />
-            <p className="text-muted-foreground text-xs font-body text-center py-3 px-4 border-t border-border">
-              Regional malaria risk distribution across Uganda — Karamoja and Busoga emerge as primary hotspots.
-            </p>
+            <figure className="rounded-xl overflow-hidden bg-gradient-to-br from-primary to-navy-light border border-accent/20 shadow-lg">
+              <div className="bg-background/95 p-3">
+                <img
+                  src={malariaRiskMap}
+                  alt="Choropleth map of malaria risk hotspots by region in Uganda 2018-19, with Karamoja at 32.1% and Busoga at 21.4%"
+                  className="w-full h-auto object-contain rounded-md"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className="px-5 py-4 border-t border-accent/20">
+                <p className="text-primary-foreground font-body text-sm leading-relaxed">
+                  <span className="text-accent font-semibold">Fig 1.</span> Regional malaria
+                  prevalence across Uganda — Karamoja and Busoga emerge as primary hotspots.
+                </p>
+                <p className="text-primary-foreground/60 font-body text-xs mt-1">
+                  Source: UDHS / MIS 2018–19
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </div>
 
