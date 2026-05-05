@@ -1,7 +1,44 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ZoomIn } from "lucide-react";
 import caseStudyImg from "@/assets/case-study.jpg";
 import teamImg from "@/assets/team-meeting.jpg";
 import malariaRiskMap from "@/assets/malaria-risk-hotspots.png";
+import malariaSeirModel from "@/assets/malaria-seir-model.png";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+
+type Figure = {
+  id: string;
+  src: string;
+  label: string;
+  number: string;
+  title: string;
+  caption: string;
+  source: string;
+  alt: string;
+};
+
+const figures: Figure[] = [
+  {
+    id: "risk-map",
+    src: malariaRiskMap,
+    label: "Risk Map",
+    number: "Fig 1.",
+    title: "Regional Risk Stratification",
+    caption: "Malaria prevalence by region — Karamoja (32.1%) and Busoga (21.4%) emerge as primary hotspots.",
+    source: "Source: UDHS / MIS 2018–19",
+    alt: "Choropleth map of malaria risk hotspots across Uganda regions",
+  },
+  {
+    id: "seir-model",
+    src: malariaSeirModel,
+    label: "SEIR Curve",
+    number: "Fig 2.",
+    title: "Hybrid ML-SEIR Outbreak Dynamics",
+    caption: "Compartmental model projecting peak of 2,978 symptomatic children at day 40 post-rainfall trigger (R₀ ≈ 10.09).",
+    source: "Model: SEIR fitted on UDHS + Google Earth Engine climate features",
+    alt: "SEIR compartmental model curve showing infectious, exposed, susceptible and recovered children over 200 days",
+  },
+];
 
 const metrics = [
   { value: "340%", label: "ROI Achieved" },
@@ -118,25 +155,50 @@ const CaseStudySection = () => {
                 <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
               </a>
             </div>
-            <figure className="rounded-xl overflow-hidden bg-gradient-to-br from-primary to-navy-light border border-accent/20 shadow-lg">
-              <div className="bg-background/95 p-3">
-                <img
-                  src={malariaRiskMap}
-                  alt="Choropleth map of malaria risk hotspots by region in Uganda 2018-19, with Karamoja at 32.1% and Busoga at 21.4%"
-                  className="w-full h-auto object-contain rounded-md"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption className="px-5 py-4 border-t border-accent/20">
-                <p className="text-primary-foreground font-body text-sm leading-relaxed">
-                  <span className="text-accent font-semibold">Fig 1.</span> Regional malaria
-                  prevalence across Uganda — Karamoja and Busoga emerge as primary hotspots.
-                </p>
-                <p className="text-primary-foreground/60 font-body text-xs mt-1">
-                  Source: UDHS / MIS 2018–19
-                </p>
-              </figcaption>
-            </figure>
+            <Tabs defaultValue="risk-map" className="w-full">
+              <TabsList className="bg-secondary mb-3">
+                {figures.map((f) => (
+                  <TabsTrigger key={f.id} value={f.id} className="font-body text-xs">
+                    {f.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              {figures.map((f) => (
+                <TabsContent key={f.id} value={f.id} className="mt-0">
+                  <figure className="rounded-xl overflow-hidden bg-gradient-to-br from-primary to-navy-light border border-accent/20 shadow-lg">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <button
+                          type="button"
+                          className="relative block w-full bg-background/95 p-3 group/zoom"
+                          aria-label={`Zoom into ${f.title}`}
+                        >
+                          <img
+                            src={f.src}
+                            alt={f.alt}
+                            className="w-full h-auto object-contain rounded-md"
+                            loading="lazy"
+                          />
+                          <span className="absolute top-5 right-5 bg-primary/80 text-primary-foreground rounded-full p-2 opacity-0 group-hover/zoom:opacity-100 transition-opacity">
+                            <ZoomIn size={16} />
+                          </span>
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-5xl p-2 bg-background">
+                        <img src={f.src} alt={f.alt} className="w-full h-auto object-contain rounded-md" />
+                      </DialogContent>
+                    </Dialog>
+                    <figcaption className="px-5 py-4 border-t border-accent/20">
+                      <p className="text-primary-foreground font-body text-sm leading-relaxed">
+                        <span className="text-accent font-semibold">{f.number}</span>{" "}
+                        <span className="font-semibold">{f.title}</span> — {f.caption}
+                      </p>
+                      <p className="text-primary-foreground/60 font-body text-xs mt-1">{f.source}</p>
+                    </figcaption>
+                  </figure>
+                </TabsContent>
+              ))}
+            </Tabs>
           </div>
         </div>
 
