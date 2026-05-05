@@ -73,6 +73,53 @@ const CaseStudySection = () => {
           </div>
         </div>
 
+        {/* Uganda Malaria ML Case Study */}
+        <div className="glass-card rounded-2xl p-8 lg:p-12 mb-8">
+          <div className="grid lg:grid-cols-3 gap-8 items-start">
+            <div className="lg:col-span-2">
+              <span className="inline-block bg-accent/10 text-accent text-xs font-semibold font-body tracking-wider uppercase px-3 py-1.5 rounded-full mb-4">
+                Disease Modelling & Surveillance
+              </span>
+              <h3 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-4 leading-snug">
+                Uganda Malaria Spatio-Temporal Machine Learning
+              </h3>
+              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+                A machine-learning study integrating UDHS survey, household, geographic and Google Earth
+                Engine environmental data to map malaria risk across Uganda. We combined an SEIR
+                outbreak model with regional risk stratification to forecast hotspots and quantify the
+                impact of LLIN bed-net distribution interventions.
+              </p>
+              <ul className="text-muted-foreground font-body text-sm space-y-2 mb-6 list-disc pl-5">
+                <li>Identified Karamoja (32.1%) and Busoga (21.4%) as very-high-risk regions.</li>
+                <li>SEIR model: peak of 2,978 sick children at day 40, R₀ ≈ 10.09.</li>
+                <li>Mass LLIN distribution scenario: 16% reduction in peak cases, peak delayed by 10 days.</li>
+              </ul>
+              <a
+                href="https://github.com/ekiru111/Uganda-Malaria-Spatio-temporal-ML"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent font-semibold font-body group/link hover:gap-3 transition-all"
+              >
+                View Project on GitHub
+                <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { value: "7,787", label: "Children Tested" },
+                { value: "13", label: "Regions Mapped" },
+                { value: "16%", label: "Peak Case Reduction" },
+                { value: "R₀ 10", label: "Transmission Index" },
+              ].map((m) => (
+                <div key={m.label} className="text-center bg-secondary rounded-xl p-4">
+                  <p className="font-heading text-xl font-bold text-accent">{m.value}</p>
+                  <p className="text-muted-foreground text-xs font-body mt-1">{m.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Secondary Case Study */}
         <div className="glass-card rounded-2xl overflow-hidden grid lg:grid-cols-5">
           <div className="lg:col-span-2">
