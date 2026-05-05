@@ -1,4 +1,4 @@
-import { BarChart3, LineChart, Target, BookOpen, ArrowUpRight, RefreshCw } from "lucide-react";
+import { BarChart3, LineChart, Target, BookOpen, ArrowUpRight, RefreshCw, Activity } from "lucide-react";
 
 const services = [
   {
@@ -33,6 +33,14 @@ const services = [
       "Mixed-methods research combining qualitative depth with quantitative rigor to inform policy and strategy across the continent.",
     stat: "30+ publications",
     color: "teal" as const,
+  },
+  {
+    icon: Activity,
+    title: "Disease Modeling & Surveillance",
+    description:
+      "Epidemiological modelling and real-time surveillance systems that track outbreaks, forecast trends, and inform public health response across Africa.",
+    stat: "15+ health systems",
+    color: "accent" as const,
   },
 ];
 
