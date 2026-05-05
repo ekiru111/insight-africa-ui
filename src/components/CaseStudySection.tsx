@@ -119,6 +119,17 @@ const CaseStudySection = () => {
               ))}
             </div>
           </div>
+          <div className="mt-8 rounded-xl overflow-hidden bg-background border border-border">
+            <img
+              src={malariaRiskMap}
+              alt="Choropleth map showing malaria risk hotspots by region in Uganda 2018-19, with Karamoja at 32.1% and Busoga at 21.4%"
+              className="w-full h-auto object-contain"
+              loading="lazy"
+            />
+            <p className="text-muted-foreground text-xs font-body text-center py-3 px-4 border-t border-border">
+              Regional malaria risk distribution across Uganda — Karamoja and Busoga emerge as primary hotspots.
+            </p>
+          </div>
         </div>
 
         {/* Secondary Case Study */}
