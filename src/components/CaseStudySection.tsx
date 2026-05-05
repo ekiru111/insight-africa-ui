@@ -155,25 +155,50 @@ const CaseStudySection = () => {
                 <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
               </a>
             </div>
-            <figure className="rounded-xl overflow-hidden bg-gradient-to-br from-primary to-navy-light border border-accent/20 shadow-lg">
-              <div className="bg-background/95 p-3">
-                <img
-                  src={malariaRiskMap}
-                  alt="Choropleth map of malaria risk hotspots by region in Uganda 2018-19, with Karamoja at 32.1% and Busoga at 21.4%"
-                  className="w-full h-auto object-contain rounded-md"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption className="px-5 py-4 border-t border-accent/20">
-                <p className="text-primary-foreground font-body text-sm leading-relaxed">
-                  <span className="text-accent font-semibold">Fig 1.</span> Regional malaria
-                  prevalence across Uganda — Karamoja and Busoga emerge as primary hotspots.
-                </p>
-                <p className="text-primary-foreground/60 font-body text-xs mt-1">
-                  Source: UDHS / MIS 2018–19
-                </p>
-              </figcaption>
-            </figure>
+            <Tabs defaultValue="risk-map" className="w-full">
+              <TabsList className="bg-secondary mb-3">
+                {figures.map((f) => (
+                  <TabsTrigger key={f.id} value={f.id} className="font-body text-xs">
+                    {f.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              {figures.map((f) => (
+                <TabsContent key={f.id} value={f.id} className="mt-0">
+                  <figure className="rounded-xl overflow-hidden bg-gradient-to-br from-primary to-navy-light border border-accent/20 shadow-lg">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <button
+                          type="button"
+                          className="relative block w-full bg-background/95 p-3 group/zoom"
+                          aria-label={`Zoom into ${f.title}`}
+                        >
+                          <img
+                            src={f.src}
+                            alt={f.alt}
+                            className="w-full h-auto object-contain rounded-md"
+                            loading="lazy"
+                          />
+                          <span className="absolute top-5 right-5 bg-primary/80 text-primary-foreground rounded-full p-2 opacity-0 group-hover/zoom:opacity-100 transition-opacity">
+                            <ZoomIn size={16} />
+                          </span>
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-5xl p-2 bg-background">
+                        <img src={f.src} alt={f.alt} className="w-full h-auto object-contain rounded-md" />
+                      </DialogContent>
+                    </Dialog>
+                    <figcaption className="px-5 py-4 border-t border-accent/20">
+                      <p className="text-primary-foreground font-body text-sm leading-relaxed">
+                        <span className="text-accent font-semibold">{f.number}</span>{" "}
+                        <span className="font-semibold">{f.title}</span> — {f.caption}
+                      </p>
+                      <p className="text-primary-foreground/60 font-body text-xs mt-1">{f.source}</p>
+                    </figcaption>
+                  </figure>
+                </TabsContent>
+              ))}
+            </Tabs>
           </div>
         </div>
 
