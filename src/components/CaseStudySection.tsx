@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import caseStudyImg from "@/assets/case-study.jpg";
 import teamImg from "@/assets/team-meeting.jpg";
+import malariaRiskMap from "@/assets/malaria-risk-hotspots.png";
 
 const metrics = [
   { value: "340%", label: "ROI Achieved" },
