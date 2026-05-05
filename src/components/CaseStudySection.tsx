@@ -1,7 +1,44 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ZoomIn } from "lucide-react";
 import caseStudyImg from "@/assets/case-study.jpg";
 import teamImg from "@/assets/team-meeting.jpg";
 import malariaRiskMap from "@/assets/malaria-risk-hotspots.png";
+import malariaSeirModel from "@/assets/malaria-seir-model.png";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+
+type Figure = {
+  id: string;
+  src: string;
+  label: string;
+  number: string;
+  title: string;
+  caption: string;
+  source: string;
+  alt: string;
+};
+
+const figures: Figure[] = [
+  {
+    id: "risk-map",
+    src: malariaRiskMap,
+    label: "Risk Map",
+    number: "Fig 1.",
+    title: "Regional Risk Stratification",
+    caption: "Malaria prevalence by region — Karamoja (32.1%) and Busoga (21.4%) emerge as primary hotspots.",
+    source: "Source: UDHS / MIS 2018–19",
+    alt: "Choropleth map of malaria risk hotspots across Uganda regions",
+  },
+  {
+    id: "seir-model",
+    src: malariaSeirModel,
+    label: "SEIR Curve",
+    number: "Fig 2.",
+    title: "Hybrid ML-SEIR Outbreak Dynamics",
+    caption: "Compartmental model projecting peak of 2,978 symptomatic children at day 40 post-rainfall trigger (R₀ ≈ 10.09).",
+    source: "Model: SEIR fitted on UDHS + Google Earth Engine climate features",
+    alt: "SEIR compartmental model curve showing infectious, exposed, susceptible and recovered children over 200 days",
+  },
+];
 
 const metrics = [
   { value: "340%", label: "ROI Achieved" },
