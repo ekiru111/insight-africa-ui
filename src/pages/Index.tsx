@@ -4,6 +4,7 @@ import StatsBar from "@/components/StatsBar";
 import ServicesSection from "@/components/ServicesSection";
 import BrandPillars from "@/components/BrandPillars";
 import CaseStudySection from "@/components/CaseStudySection";
+import TeamSection from "@/components/TeamSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <ServicesSection />
       <BrandPillars />
       <CaseStudySection />
+      <TeamSection />
       <FooterSection />
     </div>
   );
