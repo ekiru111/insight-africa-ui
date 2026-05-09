@@ -1,4 +1,5 @@
 import { ArrowRight, ZoomIn } from "lucide-react";
+import { Link } from "react-router-dom";
 import caseStudyImg from "@/assets/case-study.jpg";
 import teamImg from "@/assets/team-meeting.jpg";
 import malariaRiskMap from "@/assets/malaria-risk-hotspots.png";
@@ -101,13 +102,13 @@ const CaseStudySection = () => {
                 </div>
               ))}
             </div>
-            <a
-              href="#contact"
+            <Link
+              to="/case-studies/health-supply-chain-east-africa"
               className="inline-flex items-center gap-2 text-accent font-semibold font-body group/link hover:gap-3 transition-all"
             >
               Read Full Case Study
               <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -145,15 +146,13 @@ const CaseStudySection = () => {
                   </div>
                 ))}
               </div>
-              <a
-                href="https://github.com/ekiru111/Uganda-Malaria-Spatio-temporal-ML"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/case-studies/uganda-malaria-spatio-temporal-ml"
                 className="inline-flex items-center gap-2 text-accent font-semibold font-body group/link hover:gap-3 transition-all"
               >
-                View Project on GitHub
+                Read Full Case Study
                 <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
             <Tabs defaultValue="risk-map" className="w-full">
               <TabsList className="bg-secondary mb-3">
@@ -225,13 +224,13 @@ const CaseStudySection = () => {
               Built bespoke statistical models that reduced non-performing loans by 23%,
               enabling a leading bank to confidently expand into three new markets.
             </p>
-            <a
-              href="#contact"
+            <Link
+              to="/case-studies/credit-risk-pan-african-banking"
               className="inline-flex items-center gap-2 text-accent font-semibold font-body group/link hover:gap-3 transition-all"
             >
-              Learn More
+              Read Full Case Study
               <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
