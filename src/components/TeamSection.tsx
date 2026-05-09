@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import GeometricAfrica from "./GeometricAfrica";
 import ernestPeter from "@/assets/team-ernest-peter.jpg";
+import samuelBen from "@/assets/team-samuel-ben.jpg";
+import edwardKen from "@/assets/team-edward-ken.jpg";
+import phionaMoore from "@/assets/team-phiona-moore.jpg";
 
 type Member = {
   name: string;
@@ -16,6 +19,24 @@ const team: Member[] = [
     position: "CEO / Founder",
     photo: ernestPeter,
     bio: "Leads the firm's strategic vision, bringing deep expertise in data science and public-health analytics across African markets.",
+  },
+  {
+    name: "Samuel Ben",
+    position: "Co-Founder",
+    photo: samuelBen,
+    bio: "Drives partnerships and growth, connecting research insights to real-world impact across the continent.",
+  },
+  {
+    name: "Edward Ken",
+    position: "Co-Founder",
+    photo: edwardKen,
+    bio: "Heads engineering and platform delivery, building the modeling infrastructure that powers our analytics work.",
+  },
+  {
+    name: "Phiona Moore",
+    position: "Co-Founder",
+    photo: phionaMoore,
+    bio: "Oversees research design and operations, ensuring rigor and clarity from study question to client decision.",
   },
 ];
 
