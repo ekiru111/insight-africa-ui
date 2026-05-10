@@ -16,30 +16,26 @@ type Member = {
 const team: Member[] = [
   {
     name: "Mr. Ekiru Ernest Ochepa",
-    position: "CEO / Founder",
+    position: "Founder",
     photo: ernestekiru,
-    bio: "I dont have your photo, but this will do for now",
     // bio: "Leads the firm's strategic vision, bringing deep expertise in data science and public-health analytics across African markets.",
   },
   {
     name: "Mr. Munyole Samuel",
     position: "Co-Founder",
-    photo: samuelmunyole,
-    bio: "I dont have your photo, but this will do for now",
+    photo: edwardikoona,
     // bio: "Drives partnerships and growth, connecting research insights to real-world impact across the continent.",
   },
   {
     name: "Mr. Ikoona Edward",
     position: "Co-Founder",
-    photo: edwardikoona,
-    bio: "I dont have your photo, but this will do for now",
+    photo: samuelmunyole,
     // bio: "Heads engineering and platform delivery, building the modeling infrastructure that powers our analytics work.",
   },
   {
     name: "Ms Agweng Phiona",
     position: "Co-Founder",
     photo: phionaagweng,
-    bio: "I dont have your photo, but this will do for now",
     // bio: "Oversees research design and operations, ensuring rigor and clarity from study question to client decision.",
   },
 ];

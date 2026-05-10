@@ -3,7 +3,7 @@ import { BarChart3, LineChart, Target, BookOpen, ArrowUpRight, RefreshCw, Activi
 const services = [
   {
     icon: BarChart3,
-    title: "Data Analytics",
+    title: "Data Science & Analytics",
     description:
       "Transform raw data into strategic intelligence with advanced visualization, predictive modelling, and decision-support dashboards.",
     stat: "50+ projects",
@@ -22,7 +22,7 @@ const services = [
     title: "Monitoring & Evaluation",
     description:
       "End-to-end M&E systems that measure real impact — from theory of change to data collection, analysis, and reporting.",
-    stat: "200+ evaluations",
+    stat: "150+ evaluations",
     color: "teal" as const,
     isLoop: true,
   },
@@ -31,7 +31,7 @@ const services = [
     title: "Research & Insights",
     description:
       "Mixed-methods research combining qualitative depth with quantitative rigor to inform policy and strategy across the continent.",
-    stat: "30+ publications",
+    stat: "20+ publications",
     color: "teal" as const,
   },
   {
@@ -39,7 +39,7 @@ const services = [
     title: "Disease Modeling & Surveillance",
     description:
       "Epidemiological modelling and real-time surveillance systems that track outbreaks, forecast trends, and inform public health response across Africa.",
-    stat: "15+ health systems",
+    stat: "10+ health systems",
     color: "accent" as const,
   },
 ];
@@ -73,8 +73,8 @@ const ServicesSection = () => {
             Measurable Outcomes
           </h2>
           <p className="text-muted-foreground text-lg font-body leading-relaxed">
-            Four pillars of analytical excellence, each refined through years of on-the-ground
-            experience across 25+ African nations.
+            Five pillars of analytical excellence, each forged through the successful
+            delivery of over 25 complex research and data portfolios.
           </p>
         </div>
 

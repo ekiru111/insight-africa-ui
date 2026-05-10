@@ -44,8 +44,12 @@ const BrandPillars = () => {
             <span className="text-gradient-teal">Drive Results</span>
           </h2>
           <p className="text-primary-foreground/60 text-lg font-body leading-relaxed">
-            The analytical rigor of a global consultancy, combined with deep African market
-            knowledge and agile technology capabilities.
+            Founded by four biostatisticians, Insight Analytics Africa (IAA) was built to elevate
+            the standard of evidence-based progress on the continent. We bridge the gap between
+            advanced science and executive strategy across all sectors, with a profound specialization
+            in public health. By bringing clinical-grade precision to Research, Data Analytics, and M&E,
+            we ensure that the minds behind your models are the partners guiding your impact.
+            
           </p>
         </div>
 

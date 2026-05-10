@@ -12,7 +12,7 @@ const FooterSection = () => {
             </div>
             <p className="text-primary-foreground/60 font-body leading-relaxed max-w-sm mb-6">
               Empowering data-driven decision-making across Africa through rigorous
-              analytics, research, and strategic consulting.
+              data analytics, research, and strategic consulting.
             </p>
             <div className="flex flex-col gap-3">
               <a href="mailto:info@insightafrica.com" className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors text-sm font-body">

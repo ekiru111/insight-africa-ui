@@ -49,7 +49,7 @@ const Navbar = () => {
             href="#contact"
             className="gradient-gold text-accent-foreground text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
           >
-            Get to point
+            Get Started
           </a>
         </div>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
             href="#contact"
             className="block mt-4 text-center gradient-gold text-accent-foreground font-semibold px-5 py-2.5 rounded-lg"
           >
-            Get to point
+            Get Started
           </a>
         </div>
       )}

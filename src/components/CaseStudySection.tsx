@@ -202,7 +202,7 @@ const CaseStudySection = () => {
         </div>
 
         {/* Secondary Case Study */}
-        <div className="glass-card rounded-2xl overflow-hidden grid lg:grid-cols-5">
+        {/* <div className="glass-card rounded-2xl overflow-hidden grid lg:grid-cols-5">
           <div className="lg:col-span-2">
             <img
               src={teamImg}
@@ -232,7 +232,7 @@ const CaseStudySection = () => {
               <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
