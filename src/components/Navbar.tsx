@@ -49,7 +49,7 @@ const Navbar = () => {
             href="#contact"
             className="gradient-gold text-accent-foreground text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
           >
-            Get Started
+            Get to point
           </a>
         </div>
 
