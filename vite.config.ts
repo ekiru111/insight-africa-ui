@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: "/insight-africa-ui/",
   // server: {
   //   // host: "::",
   //   host: "0.0.0.0",

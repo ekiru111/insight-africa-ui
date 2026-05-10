@@ -15,7 +15,6 @@
     "test:watch": "vitest"
     
   },
-  "homepage": "http://ekiru111.github.io/",
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
