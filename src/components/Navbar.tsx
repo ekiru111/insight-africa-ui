@@ -77,7 +77,7 @@ const Navbar = () => {
             href="#contact"
             className="block mt-4 text-center gradient-gold text-accent-foreground font-semibold px-5 py-2.5 rounded-lg"
           >
-            Get Started
+            Get to point
           </a>
         </div>
       )}
