@@ -16,20 +16,20 @@ const FooterSection = () => {
             </p>
             <div className="flex flex-col gap-3">
               <a href="mailto:info@insightafrica.com" className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors text-sm font-body">
-                <Mail size={16} /> info@insightafrica.com
+                <Mail size={16} /> insightanalyticsafrica@gmail.com
               </a>
               <span className="flex items-center gap-2 text-primary-foreground/60 text-sm font-body">
-                <MapPin size={16} /> Nairobi, Kenya · Lagos, Nigeria · Johannesburg, SA
+                <MapPin size={16} /> Kampala, Uganda {/* · Nairobi, Kenya · Dar-el-salaam, Tanzania */}
               </span>
               <span className="flex items-center gap-2 text-primary-foreground/60 text-sm font-body">
-                <Phone size={16} /> +254 700 000 000
+                <Phone size={16} /> +256 784 013 274
               </span>
             </div>
           </div>
 
           <div>
             <h4 className="font-heading font-semibold text-primary-foreground mb-4">Services</h4>
-            {["Data Analytics", "Statistical Modelling", "M&E Frameworks", "Research & Insights"].map((s) => (
+            {["Disease Surveillance & Modeling", "Research & Insight", "Statistical Modelling", "Data Science & Analytics", "Monitoring & Evaluation"].map((s) => (
               <a key={s} href="#services" className="block text-primary-foreground/60 text-sm font-body mb-2.5 hover:text-accent transition-colors">
                 {s}
               </a>
