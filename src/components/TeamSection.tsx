@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import GeometricAfrica from "./GeometricAfrica";
-import ernestPeter from "@/assets/team-ernest-peter.jpg";
-import samuelBen from "@/assets/team-samuel-ben.jpg";
-import edwardKen from "@/assets/team-edward-ken.jpg";
-import phionaMoore from "@/assets/team-phiona-moore.jpg";
+import ernestekiru from "@/assets/team-ernest-peter.jpg";
+import samuelmunyole from "@/assets/team-samuel-ben.jpg";
+import edwardikoona from "@/assets/team-edward-ken.jpg";
+import phionaagweng from "@/assets/team-phiona-moore.jpg";
 
 type Member = {
   name: string;
@@ -15,28 +15,32 @@ type Member = {
 
 const team: Member[] = [
   {
-    name: "Ernest Peter",
+    name: "Mr. Ekiru Ernest Ochepa",
     position: "CEO / Founder",
-    photo: ernestPeter,
-    bio: "Leads the firm's strategic vision, bringing deep expertise in data science and public-health analytics across African markets.",
+    photo: ernestekiru,
+    bio: "I dont have your photo, but this will do for now",
+    // bio: "Leads the firm's strategic vision, bringing deep expertise in data science and public-health analytics across African markets.",
   },
   {
-    name: "Samuel Ben",
+    name: "Mr. Munyole Samuel",
     position: "Co-Founder",
-    photo: samuelBen,
-    bio: "Drives partnerships and growth, connecting research insights to real-world impact across the continent.",
+    photo: samuelmunyole,
+    bio: "I dont have your photo, but this will do for now",
+    // bio: "Drives partnerships and growth, connecting research insights to real-world impact across the continent.",
   },
   {
-    name: "Edward Ken",
+    name: "Mr. Ikoona Edward",
     position: "Co-Founder",
-    photo: edwardKen,
-    bio: "Heads engineering and platform delivery, building the modeling infrastructure that powers our analytics work.",
+    photo: edwardikoona,
+    bio: "I dont have your photo, but this will do for now",
+    // bio: "Heads engineering and platform delivery, building the modeling infrastructure that powers our analytics work.",
   },
   {
-    name: "Phiona Moore",
+    name: "Ms Agweng Phiona",
     position: "Co-Founder",
-    photo: phionaMoore,
-    bio: "Oversees research design and operations, ensuring rigor and clarity from study question to client decision.",
+    photo: phionaagweng,
+    bio: "I dont have your photo, but this will do for now",
+    // bio: "Oversees research design and operations, ensuring rigor and clarity from study question to client decision.",
   },
 ];
 
